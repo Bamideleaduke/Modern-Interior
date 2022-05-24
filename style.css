@@ -133,12 +133,15 @@ position: relative;
     font-family: 'Montserrat', sans-serif;
     display: flex; 
     margin-bottom: 0.7rem;
-    gap: 5%;
+    gap: 7%;
   
    
 }
+
+
 .profile .profile-name p{
     font-size: 1rem;
+    
     
     
 }
