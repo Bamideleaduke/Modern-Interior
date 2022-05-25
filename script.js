@@ -1,17 +1,25 @@
 const toggleBTn = document.querySelector(".toggle-btn");
-const navMenu = document.querySelector("nav-items")
+const navMenu = document.querySelector(".nav-items")
+const collapse = document.querySelector(".collapsible")
+const closeBtn =document.querySelector(".close")
 
-toggleBTn.addEventListener("click", mobileView);
 
-function mobileView() {
-    toggleBTn.classList.toggle("active");
-    navMenu.classList.toggle("active")
-};
+toggleBTn.addEventListener("click", () => {
+    collapse.classList.toggle("hide");
+});
 
-const navLink = document.querySelector(".nav-link");
+closeBtn.addEventListener("click", () => {
+    collapse.classList.toggle("hide");
+});
+
+
+
+
+
+const navLink = document.querySelectorAll(".nav-link");
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
-    toggleBTn.classList.remove("active");
-    navMenu.classList.remove("active")
+    collapse.classList.toggle("hide");
+    // collapse.classList.toggle("hide");
 }
